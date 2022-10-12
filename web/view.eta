@@ -1,0 +1,1 @@
+Hello <% it.data.birthday.toISOString().split('T')[0] %>
