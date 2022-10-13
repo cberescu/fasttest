@@ -22,8 +22,9 @@ const fastify = require('fastify')({
 
 fastify.get('/',async (request,reply)=>{
 	try {
-		return await ETA.renderFile('web/view.eta',{data:false});
+		return await fastify.view('view.eta',{data:false});
 	} catch (e) {
+    console.log(e);
 		return 'Error found'
 	}
 
